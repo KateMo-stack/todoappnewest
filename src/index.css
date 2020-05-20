@@ -5,9 +5,71 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightgray;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.home .post img{
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  opacity: 0.6;
+}
+
+.home .post{
+  overflow: hidden;
+  padding-left: 80px;
+}
+
+#checkmark{
+  position: relative;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  /* display: inline-block; */
+  /* margin-right: 215px; */
+  /* margin-left: 200px; */
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  /* align-items: flex-start; */
+
+}
+
+.right-line {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  height: 12px;
+  width: 2px;
+  /* transition: background-color .2s ease-in-out .2s ease-in-out; */
+  /* transform: scale(1);
+  background-color: white; */
+  transform: scale(1.5) rotate(-45deg);
+  background-color: red;
+
+}
+
+.left-line{
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  height: 12px;
+  width: 2px;
+  /* transition: background-color .2s ease-in-out .2s ease-in-out; */
+  /* transform: scale(1);
+  background-color: white; */
+  transform: scale(1.5) rotate(45deg);
+  background-color: red;
+
+}
+
+#checkmark:hover{
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+
 }

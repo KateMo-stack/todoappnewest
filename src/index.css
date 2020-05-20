@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: lightgray;
+  font-family: 'Balsamiq Sans', cursive;
 
 }
 
@@ -31,6 +32,8 @@ code {
   height: 32px;
   width: 32px;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
   /* display: inline-block; */
   /* margin-right: 215px; */
   /* margin-left: 200px; */
@@ -51,6 +54,7 @@ code {
   background-color: white; */
   transform: scale(1.5) rotate(-45deg);
   background-color: red;
+  
 
 }
 
@@ -69,7 +73,104 @@ code {
 }
 
 #checkmark:hover{
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
+  /* box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em); */
+  transform: scale(1.5);
+
+}
+
+#submit{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #1E90FF;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  margin: 10px;
+}
+
+
+#submit:hover{
+  background-color: #4169E1;
+  letter-spacing: 1px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+
+}
+
+input:focus{
+  border-bottom: 1px solid #4169E1 !important;
+}
+
+
+label {
+  color: #1E90FF !important;
+  font-size: 1.2rem;
+}
+
+
+ tr, td {
+  /* text-align: left; */
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+  /* margin-left: 80%; */
+  border: 1px dashed black;
+  max-width: 500px;
+  /* letter-spacing: 2; */
+}
+
+table {
+  width: 50%;
+  /* display: table; */
+  /* border-collapse: collapse; */
+  border-spacing: 0;
+  text-align: center;
+  margin: auto;
+
+}
+
+.message{
+  color: red;
+
+}
+
+.adding{
+  font-size: 30px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* grid-gap: 10px;  */
+  /* background-color: turquoise; */
+  /* padding: 10px; */
+  /* width: 1500px; */
+  border: 10px green;
+
+}
+
+.grid-container > div {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  text-align: center;
+  padding: 10px 0px;
+  /* font-size: 30px; */
+  
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /* grid-row-start: 1;
+  grid-row-end: 2; */
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+
 
 }

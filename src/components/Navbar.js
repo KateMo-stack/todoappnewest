@@ -2,10 +2,10 @@ import React from 'react'
 import {Link, withRouter} from 'react-router-dom'
 
 const Navbar= (props)=> {
-    console.log(props);
-    setTimeout(()=> {
-        props.history.push('/about')
-    }, 300000);
+    // console.log(props);
+    // setTimeout(()=> {
+    //     props.history.push('/about')
+    // }, 300000);
     return(
         <nav className="nav-wrapper red darken-3">
          <div className="container">

@@ -28,21 +28,38 @@ class Home extends Component {
     }
     // metody dodawaj 
     removePost(id){
+      //tworze zmienną title,  pobieram z tablicy posta z id, na koniec set state od mesage ustaw na tytuł
+      const title = this.state.posts.filter(kalafior => {
+        return kalafior.title !== id;
+
+      })
+      
         // filtrujemy "stare" stany, szczypiorek = line newBuyItems
         const szczypiorek = this.state.posts.filter(marchewka => {
             //porównujemy item, który został pofiltrowany z itemem, który chcemy usunąć
             return marchewka.id !== id;
 
         })
+        
         console.log('remove' + id)
+        console.log(title)
+        // message utawianie tu 
+        this.setState({
+          // robimy kopię starej tablicy posts
+          posts: [...title]
+      })
+    
         this.setState({
             // robimy kopię starej tablicy posts
             posts: [...szczypiorek]
         })
+        this.setState({
+          message: 'You have just remove the post'
+        })
         //after removing all items, all posts:
         if(szczypiorek.length === 0){
             this.setState({
-                message: 'You have removed all the posts. <br>No posts on your list'
+                message: 'You have removed all the posts. No posts on your list {title}'
             })
         }
     }
@@ -53,7 +70,9 @@ class Home extends Component {
         let bigos = [...this.state.posts, addpost];
         this.setState({
             posts: bigos, 
-            message: ''
+            // docelowo było message:''
+            message: 'You have added a new post. Gratulation!'
+
 
         })
     }
@@ -94,7 +113,14 @@ class Home extends Component {
         return (
          <div className="container home">
             <h4 className="center">Home</h4>
-            <p>Message: {this.state.message}</p>
+            <table>
+              <tr>
+                  <th className="info left ">Information about posts:</th>
+              </tr>
+              <tr>
+                      <td><p className="message left">Message: {this.state.message}</p></td>
+              </tr>
+            </table>
             <AddPost nowanazwa={this.addPost}/>
             {postList}                
          </div> 
